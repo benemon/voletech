@@ -70,6 +70,8 @@ Two endpoints are created:
 
 Sending the above requests to each endpoint will return the same result using the default Vault data supplied in this repository. You'll see the different types of request logged in the Pod logs.
 
+You can use these services to either populate credentials as part of a post-build step, or as part of a more realtime process.
+
 
 
 
