@@ -15,6 +15,17 @@ In theory some form of this process will continue to function after PicketBox is
 
 An OpenShift template is provided in the *openshift* directory. This carries out an S2I build on this Git repository, and also contains the secrets necessary for this process to work. These are baked into the template, although you'll want to add your own using OpenShift's Secret function.
 
+To use the template, first create it:
+
+`oc create -f openshift/voletech-openshift-template.yaml`
+
+
+Then instantiate it:
+
+`oc new-app --template=voletech`
+
+
+
 ## Instruction
 
 * Add your sensitive data to a vault following the aforementioned KB article. Make a note of the generated key. This will be used in your application.
@@ -45,5 +56,24 @@ An OpenShift template is provided in the *openshift* directory. This carries out
 
 
 These values should, as a note of good practice, be stored as secrets within the project - but its harder to see what's going on as part of a demo. Which I guess would be the point.
+
+## Usage
+
+A route is created to listen for incoming requests e.g http://voletech-vault.rhel-cdk.10.1.2.2.xip.io/
+
+Two endpoints are created:
+
+* Single requests - `/vault/{key}` - http://voletech-vault.rhel-cdk.10.1.2.2.xip.io/vault/VAULT::vb::password::1
+
+ 
+* Aggregated requests - `/vault/{vault}/{block}/{attribute}/{position}` - http://voletech-vault.rhel-cdk.10.1.2.2.xip.io/vault/VAULT/vb/password/1 
+
+Sending the above requests to each endpoint will return the same result using the default Vault data supplied in this repository.
+
+
+
+
+
+
 
 
