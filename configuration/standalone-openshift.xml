@@ -36,12 +36,12 @@
     </extensions>
     
     <vault>
-  		<vault-option name="KEYSTORE_URL" value="${env.HOME}/vault/vault.keystore"/>
+  		<vault-option name="KEYSTORE_URL" value="${env.VAULT_HOME}/vault.keystore"/>
 	    <vault-option name="KEYSTORE_PASSWORD" value="${env.KEYSTORE_PASSWORD}"/>
   		<vault-option name="KEYSTORE_ALIAS" value="vault"/>
   		<vault-option name="SALT" value="1234abcd"/>
   		<vault-option name="ITERATION_COUNT" value="120"/>
-  		<vault-option name="ENC_FILE_DIR" value="${env.HOME}/vault/"/>
+  		<vault-option name="ENC_FILE_DIR" value="${env.VAULT_HOME}"/>
 	</vault>
 	
     <management>
