@@ -1,2 +1,2 @@
-# voletech
-Wrapping EAP's built-in Password Vault function with a REST API for better credential management in OpenShift
+# jboss-vaultec
+A little example at how to use JBoss EAP's Password Vault to avoid storing sensitive information in Environment Variables
