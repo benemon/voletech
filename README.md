@@ -68,7 +68,7 @@ Two endpoints are created:
  
 * Aggregated requests - `/vault/{vault}/{block}/{attribute}/{position}` - http://voletech-vault.rhel-cdk.10.1.2.2.xip.io/vault/VAULT/vb/password/1 
 
-Sending the above requests to each endpoint will return the same result using the default Vault data supplied in this repository.
+Sending the above requests to each endpoint will return the same result using the default Vault data supplied in this repository. You'll see the different types of request logged in the Pod logs.
 
 
 
