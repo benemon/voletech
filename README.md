@@ -1,4 +1,4 @@
-# jboss-vaultec
+# Voletech
 A little example at how to use JBoss EAP's Password Vault to avoid storing sensitive information in Environment Variables. The solution is roughly based on [KB370013](https://access.redhat.com/solutions/370013). It has several working parts: 
 
 * The Password Vault files - the vault itself, and the vault keystore. These are provided as examples, based on the contents of [KB2790371](https://access.redhat.com/solutions/2790371). 
