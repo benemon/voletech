@@ -38,9 +38,9 @@
     <vault>
   		<vault-option name="KEYSTORE_URL" value="${env.VAULT_HOME}/vault.keystore"/>
 	    <vault-option name="KEYSTORE_PASSWORD" value="${env.KEYSTORE_PASSWORD}"/>
-  		<vault-option name="KEYSTORE_ALIAS" value="vault"/>
-  		<vault-option name="SALT" value="1234abcd"/>
-  		<vault-option name="ITERATION_COUNT" value="120"/>
+  		<vault-option name="KEYSTORE_ALIAS" value="${env.KEYSTORE_PASSWORD}"/>
+  		<vault-option name="SALT" value="${env.SALT}"/>
+  		<vault-option name="ITERATION_COUNT" value="${env.ITERATION_COUNT}"/>
   		<vault-option name="ENC_FILE_DIR" value="${env.VAULT_HOME}"/>
 	</vault>
 	
