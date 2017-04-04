@@ -26,7 +26,7 @@ An OpenShift template is provided in the *openshift* directory. This carries out
 * **NOTE** Update the secret once created to reference the correctly capitalised filename - VAULT.dat - otherwise it doesn't function correctly.
 
 
-* Mount both of these as volumes in your DeploymentConfig. Make a note of where you mounted them.
+* Mount both of these as volumes in your DeploymentConfig. Make a note of where you mounted them - `oc volume dc/voletech --add --name=vault --type=secret --secret-name=vault --mount-path=/deployments/vault`
 
 
 * Add `VAULT_HOME` environment variable, which defines where your mounted Vault and Keystore are located
